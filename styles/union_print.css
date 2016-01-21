@@ -1,7 +1,29 @@
-@page{margin:0}
+@page {
+  margin: 0;
+}
 
-body { background: transparent url(/images/gallery/red-bg.gif) top left repeat-y; }
-#invoice {background-image: none; background-color: transparent; padding-bottom:0}
-#Main {text-align: left;background-color: transparent;border-top: none;}
+body {
+  background: transparent url("../images/red-bg.gif") top left repeat-y;
+}
 
-table#invoice-amount td, table#invoice-amount th, div{border-width:0.05mm !important}
+#invoice {
+  background-color: transparent;
+  background-image: none;
+  padding-bottom: 0;
+}
+
+#Main {
+  background-color: transparent;
+  border-top: none;
+  text-align: left;
+}
+
+table#invoice-amount td,
+table#invoice-amount th,
+div {
+  border-width: 0.05mm !important;
+}
+
+#meta {
+  display: none;
+}
