@@ -20,7 +20,9 @@ Running a local server ensures the relevant `background` paths in the theme CSS 
 ## Edit your CSS
 Duplicate both screen and print CSS files for whatever theme you want to base yours on and rename them (or simply create your own from scratch, but be aware this will be much harder). Now change the stylesheet paths in `index.html` to reference your new stylesheets.
 
-Make all of the changes to your theme CSS until you’re happy, then paste that CSS into the custom theme area of your FreeAgent account. Our [guide to creating custom invoice themes](http://www.freeagent.com/support/kb/invoicing/css-guide-for-invoice-templates/) article contains further detail on this.
+Make all of the changes to your theme CSS. Remember that your invoice has to render well as a PDF in addition to the on-screen preview. Theme layouts also change depending on what state they’re in (e.g. a draft invoice has additional elements like the "Add Invoice Item" button), and when other company-type content is present (e.g. a sales tax column).
+
+When you’re happy with your changes and want to test them, paste your CSS into the custom theme area of your FreeAgent account. Our [guide to creating custom invoice themes](http://www.freeagent.com/support/kb/invoicing/css-guide-for-invoice-templates/) article contains further detail on this.
 
 Remember it’s not possible to edit the underlying HTML of invoice in FreeAgent. The markup in `index.html` is purely for reference. When you go to use your custom theme, the only code you’ll be able to paste into FreeAgent will be CSS.  
 
