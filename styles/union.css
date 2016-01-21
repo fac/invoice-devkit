@@ -5,7 +5,7 @@ Created by Olly Headey
 */
 /*=========================== TYPOGRAPHY =========================*/
 
-#invoice{font-family: "Century Gothic", Helvetica, Arial, Verdana, sans-serif !important } 
+#invoice{font-family: "Century Gothic", Helvetica, Arial, Verdana, sans-serif !important }
 #Main  #invoice h1 {margin: 0;color: #555;font-size: 24px;text-transform: uppercase;}
 #Main #invoice h2, #Main #invoice h3 {color:#000; text-transform: none;}
 #invoice h2 {margin: 10px 0;font-size: 14pt;}
@@ -24,7 +24,7 @@ Created by Olly Headey
 
 /*=========================== LAYOUT =========================*/
 
-#invoice {padding:0 1cm 1cm 2.5cm; background: #fff url(../images/red-bg.gif) top left repeat-y; width: 600px; }
+#invoice {padding:0 1cm 1cm 2.5cm; background: #fff url("/gallery/red-bg.png") top left repeat-y; width: 600px; }
 #invoice-header .logo {float:left;}
 #invoice-header{margin-top:1.5cm; border-bottom:1px solid #a10000;padding-bottom:10px; overflow:hidden}
 * html #invoice-header {height:1%}
@@ -63,4 +63,3 @@ Created by Olly Headey
 #invoice-amount .subtotal_th{width:18%; text-align:right}
 #invoice-amount .unitprice_th{width:15%; text-align:right}
 #invoice-amount .salestax_th{width:8%; text-align:center}
-

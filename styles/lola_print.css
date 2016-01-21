@@ -1,3 +1,32 @@
-#invoice{padding-bottom:0}
+@page {
+  margin: 0;
+  padding: 0;
+}
 
-table#invoice-amount td, table#invoice-amount th, div{border-width:0.05mm !important}
+@bottom-center {
+  color: #666;
+  content: counter(page) "/" counter(pages);
+  font: 12px Arial, Helvetica, sans-serif;
+}
+
+@page:first {
+  margin-top: 1.5cm;
+}
+
+@top-center {
+  content: none;
+}
+
+#invoice {
+  padding-bottom: 0;
+}
+
+table#invoice-amount td,
+table#invoice-amount th,
+div {
+  border-width: 0.05mm !important;
+}
+
+#meta {
+  display: none;
+}

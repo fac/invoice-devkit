@@ -1,19 +1,18 @@
 /*
-Lola Invoice Template
+Lola Invoice Theme
 Created by Olly Headey
 18/02/08
 */
 
 
 /*=========================== INVOICE LOLA =========================*/
-#invoice a.add {color: #fff;}
 
 #invoice img { border: none; }
 
 /*=========================== TYPOGRAPHY =========================*/
 
-#Main #invoice h1 {margin: 0;color: #699; font-size: 24px;text-transform: uppercase;}
-#invoice {font-family: "Gill Sans", "Gill Sans MT", Helvetica, Arial, Verdana, sans-serif; color:#000; text-transform: none; color: #699}
+#invoice h1 {margin: 0;color: #699; font-size: 24px;text-transform: uppercase;}
+#invoice {font-family: "Gill Sans", "Gill Sans MT", Helvetica, Arial, Verdana, sans-serif; text-transform: none; color: #699}
 #invoice h2 {margin: 10px 0;font-size: 14pt; }
 #invoice-amount td, th {font-size: 11pt;}
 #invoice-header #company-address {clear: right; text-align: right; font-size: 11pt; line-height: 14pt; padding-top: 2em;}
@@ -22,7 +21,7 @@ Created by Olly Headey
 #invoice-info h2, #invoice-info h3 {margin: 0; font-weight: normal; }
 #invoice-info h3 em { font-style: normal; font-size: 16pt; font-weight: normal; color: #699}
 #invoice-info h2 {font-weight: normal; font-size:24pt; text-transform: lowercase; color: #699}
-#invoice-info h3 {font-size:15pt;}
+#invoice-info h3 {color: #699; font-size:15pt;}
 #invoice-info #payment-total{display:none}
 #invoice #invoice-info p {text-align:right;margin-top:0; color: #B8B885}
 #invoice-info p#payment-terms {display:none}
@@ -48,6 +47,10 @@ Created by Olly Headey
 #invoice-amount {margin: 2em 0; clear: both; }
 #company-address {margin: 0; padding: 0;}
 
+#invoice-amount .item_group_title td {padding-top: 0.6em;}
+#invoice-amount .item_group_title h2 {color: #699;}
+
+
 #comments{clear:both; padding-top:0.1cm}
 
 /*=========================== TABLES =========================*/
@@ -56,8 +59,8 @@ Created by Olly Headey
 #invoice-amount th {color: #fff; text-align: left;white-space: nowrap;padding: 3px 5px 3px 5px; font-weight: normal;background: #B8B885; }
 #invoice-amount tr#discount_tr, #invoice-amount tr#net_total_tr, #invoice-amount tr#vat_tr {color: #699}
 #invoice-amount tr#total_tr {background: #B8B885; color: #fff; }
-#invoice-amount tr.item td {padding-top: 7px; padding-bottom: 7px;border-bottom: 1px solid #B8B885; }
-#invoice-amount td {margin: 0; padding:2px 5px; vertical-align: top; }
+#invoice-amount tr.item td {padding-top: 10px; padding-bottom: 10px;border-bottom: 1px solid #B8B885; background: #fff;}
+#invoice-amount td {margin: 0; padding:5px; vertical-align: top; }
 #invoice-amount td.item_r{text-align: right;}
 #invoice-amount td.item_l{text-align: left;white-space: normal; padding-bottom: 14px;}
 #invoice-amount td.total{text-align: right;font-weight: bold; padding: 3px 5px 3px 5px; }
@@ -68,4 +71,10 @@ Created by Olly Headey
 #invoice-amount .quantity_th{width:13%}
 #invoice-amount .subtotal_th{width:15%; text-align:right}
 #invoice-amount .unitprice_th{width:10%; text-align:right}
-#invoice-amount .salestax_th{width:8%; text-align:center} 
+#invoice-amount .salestax_th{width:8%; text-align:center}
+
+/* Invoice UK VAT Summary Table */
+#invoice #invoice-uk-vat-summary{width:100%;border-collapse:collapse;margin:25px 0 0 0;clear:both;border:0; background:#fff; }
+#invoice tr#invoice-uk-vat-header th{padding:7px 0;border-top: 1px solid #ccc;}
+#invoice-uk-vat-summary td, #invoice #invoice-uk-vat-summary th{text-align:left; font-size:9pt;padding:2px 0;}
+#vat-total td, #vat-total th{border-top:1px solid #ccc;}

@@ -25,7 +25,7 @@ Created by Roan Lavery
 #bank_name{color:#666}
 /*=========================== LAYOUT =========================*/
 
-#invoice{padding:0 0.8cm 1.8cm 0.8cm; background: #fff url(../images/ripple.jpg) 0px 120px no-repeat;  }
+#invoice{padding:0 0.8cm 1.8cm 0.8cm; background: #fff url("/gallery/ripple.jpg") 0px 120px no-repeat;  }
 #invoice-header #company-address {float:right; width:250px;clear:right; text-align:right; margin-top:10px }
 #invoice-header h1{float:left; width:350px; margin:5px 0 0 0}
 #invoice-header{padding-top:0.5cm; }
@@ -70,4 +70,3 @@ Created by Roan Lavery
 #invoice-amount .subtotal_th{width:20%; text-align:right}
 #invoice-amount .unitprice_th{width:15%; text-align:right}
 #invoice-amount .salestax_th{width:7%; text-align:center}
-

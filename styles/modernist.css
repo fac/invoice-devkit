@@ -1,0 +1,334 @@
+/*
+Modernist Invoice Template
+Created by Robbie Manson
+May 2013
+*/
+
+/* Globals
+----------------------------------------------- */
+
+#invoice {
+  background: #ffffff url("/themes/modernist/border.png") no-repeat 0 60px;
+  background-size: 100%;
+  color: #353535;
+  font: normal 13px/18px "Helvetica Neue",Arial,Helvetica,sans-serif; /* 13px */
+  padding: 4.615em 0; /* 60/13px */
+  position: relative;
+  width: 764px;
+}
+#invoice h1,
+#invoice h2,
+#invoice h3 {
+  color: #353B45;
+  font: bold 1em "Helvetica Neue",Arial,Helvetica,sans-serif;
+  margin: 0;
+}
+#invoice h3 {
+  font-weight: normal;
+}
+
+#invoice img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Tables
+----------------------------------------------- */
+#invoice table {
+  border-collapse: collapse;
+  line-height: 18px;
+}
+#invoice table td,
+#invoice table th {
+  border: 0;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em 0; /* 20/896px */
+  vertical-align: top;
+}
+#invoice table #header_row {
+  background: url("/themes/modernist/dotted_border.png") repeat-x bottom left;
+}
+#invoice table td {
+  padding: 0.5em 0;
+}
+
+#invoice tr.odd td {
+  background: none;
+}
+
+#invoice #header_row th,
+#invoice #invoice-uk-vat-summary th {
+  line-height: 1em;
+  padding-bottom: 0.95em;
+}
+#invoice .subtotal_th,
+#invoice .subtotal_td {
+  width: 7.692em; /* 100px */
+}
+#invoice .salestax_th,
+#invoice .taxrate_td {
+  width: 3.846em; /* 50px */
+}
+#invoice .unitprice_th,
+#invoice .price_td,
+#invoice .quantity_th,
+#invoice .quantity_td {
+  width: 6.154em; /* 80px */
+}
+#invoice .quantity_th,
+#invoice .quantity_td {
+  white-space: nowrap;
+}
+
+/* Invoice Header
+----------------------------------------------- */
+#invoice #client-details {
+  min-height: 1%;
+  position: absolute;
+  top: 4.615em; /* 60/13px */
+}
+#invoice #invoice-header {
+  float: right;
+  margin-right: 2.2321429%; /* 20/896px */
+  min-height: 12em;
+  width: 18.3035714%; /* 164/896px */
+  position: relative;
+}
+#invoice #client-details {
+  left: 0;
+}
+#invoice #invoice-header #company-address {
+  padding-right: 10.8695652%; /* 20/184px */
+}
+#invoice #invoice-header img {
+  margin-bottom: 1em;
+  height: auto !important;
+  width: 100% !important;
+}
+#invoice #company-postcode .postal-code {
+  display: block;
+}
+#invoice #invoice-header .email {
+  word-wrap: break-word;
+}
+#invoice #invoice-amount {
+  clear: both;
+}
+#invoice #invoice-amount,
+#invoice #client-details {
+  margin: 0 4.4642857% !important; /* 40/896px */
+  width: 70.5357143%; /* 632/896px */
+}
+#invoice #invoice-uk-vat-summary {
+  clear: both;
+  float: left;
+  margin: 2em 25% 0 4.4642857%; /* 40/896px */
+  width: 70.5357143%; /* 632/896px */
+}
+#invoice #invoice-uk-vat-summary td,
+#invoice #invoice-uk-vat-summary th {
+  text-align: left;
+}
+#invoice #invoice-uk-vat-header + tr {
+  background: url("/themes/modernist/dotted_border.png") repeat-x bottom left;
+}
+#invoice #invoice-uk-vat-header + tr th {
+  font-weight: bold;
+}
+#invoice #invoice-uk-vat-header th {
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+#invoice #invoice-header,
+#invoice #client-details,
+#invoice #comments,
+#invoice #invoice-other,
+#invoice #payment-details {
+  padding-top: 1em;
+}
+#invoice #invoice-other,
+#invoice #payment-details {
+  border-top: 1px solid #353B45;
+}
+#invoice #invoice-other + #payment-details {
+  border-top: 0;
+  padding-top: 0;
+}
+#invoice #client-details .fn {
+  font-weight: bold;
+}
+
+/* Invoice Info
+----------------------------------------------- */
+#invoice #invoice-info {
+  background: url("/themes/modernist/border_emphasised.png") no-repeat bottom left;
+  background-size: 100%;
+  float: left;
+  margin: 5.5em 0 0 0;
+  padding-bottom: 1em;
+  padding-left: 4.4642857%; /* 40/896px */
+  padding-right: 25%; /* 224/896px */
+  width: 70.5357143%; /* 632/896px */
+}
+#invoice #invoice-info * {
+  display: inline;
+  font-size: 1em;
+}
+#invoice #invoice-info h2:after,
+#invoice #invoice-info h3:after {
+  content: " ·";
+}
+#invoice #invoice-info #payment-terms,
+#invoice #invoice-info #payment-total,
+#invoice #invoice-info #invoice-total {
+  display: none;
+}
+
+/* Invoice Amount
+----------------------------------------------- */
+#invoice #invoice-amount .item_controls {
+  right: 108px;
+}
+#invoice #invoice-amount .quantity_th,
+#invoice #invoice-amount .details_notax_th,
+#invoice #invoice-amount .details_th,
+#invoice #invoice-amount .unitprice_th,
+#invoice #invoice-amount .subtotal_th {
+  white-space: nowrap;
+}
+#invoice #invoice-amount .quantity_th,
+#invoice #invoice-amount .details_th,
+#invoice #invoice-amount .item_l,
+#invoice #invoice-amount .details_notax_th {
+  text-align: left;
+}
+#invoice #invoice-amount .unitprice_th,
+#invoice #invoice-amount .salestax_th,
+#invoice #invoice-amount .subtotal_th,
+#invoice #invoice-amount .item_r,
+#invoice #invoice-amount .total {
+  text-align: right;
+}
+#invoice table td.item_r,
+#invoice #invoice-amount .subtotal_th,
+#invoice #invoice-amount .unitprice_th,
+#invoice #invoice-amount .salestax_th {
+  padding-left: 20px;
+  padding-right: 0;
+}
+#invoice table td.item_l,
+#invoice table .quantity_th,
+#invoice table .details_th,
+#invoice table .details_notax_th {
+  padding-right: 20px;
+}
+#invoice #invoice-amount .item td:last-child,
+#invoice #invoice-amount #discount_tr td:last-child,
+#invoice #invoice-amount #net_total_tr td:last-child,
+#invoice #invoice-amount #vat_tr td:last-child,
+#invoice #invoice-amount #total_tr .total {
+  font-weight: bold;
+}
+#invoice #invoice_items .description_td,
+#invoice #invoice-amount .details_notax_th,
+#invoice table .details_th {
+  padding-right: 0;
+}
+#invoice #invoice-amount #total_tr #total_currency {
+  font-weight: normal;
+  white-space: nowrap;
+}
+#invoice #invoice-amount tbody .item:first-child td,
+#invoice #invoice-uk-vat-summary tbody tr:nth-child(3) td {
+  padding-top: 1em;
+}
+#invoice #invoice-amount tfoot td {
+  border: 0;
+}
+#invoice #invoice-amount tfoot tr:first-child td {
+  padding-top: 2em;
+}
+#invoice #invoice-amount #total_tr td {
+  padding-top: 6.385em; /* 83/13px */
+  text-align: right;
+}
+#invoice #invoice-amount #total_tr .total {
+  background: url("/themes/modernist/4px_solid_border.png") repeat-x 0 6.384615385em; /* 83/13px */
+}
+#invoice #invoice-amount #total_tr #total_currency,
+#invoice #invoice-amount #total_tr #total_amount,
+#invoice #invoice-amount #total_tr .total {
+  padding-top: 97px;
+}
+
+/* Invoice Meta
+----------------------------------------------- */
+#invoice #payment-details,
+#invoice #invoice-other {
+  clear: both;
+  float: right;
+  font-weight: bold;
+  padding-right: 2.2321429%; /* 20/896px */
+  width: 18.3035714%; /* 164/896px */
+}
+#invoice #invoice-other,
+#invoice #payment-details {
+  margin-top: -2.923em; /* 38px */
+}
+#invoice #invoice-other + #payment-details {
+  margin-top: 0;
+}
+#invoice #invoice-other #company-reg-number,
+#invoice #invoice-other #sales-tax-reg-number,
+#invoice #invoice-other #your-tax-number,
+#invoice #invoice-other #contract-number,
+#invoice #payment-details #bank_name,
+#invoice #payment-details #sort-code,
+#invoice #payment-details #account-number,
+#invoice #payment-details #iban,
+#invoice #payment-details #bic,
+#invoice #project-name {
+  margin-bottom: 0.75em;
+}
+#invoice #invoice-other strong,
+#invoice #payment-details strong {
+  display: block;
+  font-weight: normal;
+}
+#invoice #payment-details h2,
+#invoice #invoice-other h2 {
+  display: none;
+}
+#invoice #comments {
+  background: url("/themes/modernist/border_emphasised.png") no-repeat top left;
+  border: 0;
+  clear: both;
+  float: left;
+  margin: 6.153846154em 25% 0 0; /* 80/13px */
+  padding-left: 4.4642857%; /* 40/896px */
+  width: 70.5357143%; /* 632/896px */
+}
+
+/* Draft State Fixes
+----------------------------------------------- */
+.draft #invoice #invoice-amount #total_tr td {
+  padding-bottom: 0;
+}
+.draft #invoice #invoice-other,
+.draft #invoice #payment-details {
+  margin-top: -2.385em; /* 31px */
+}
+.draft #invoice.pagestyle {
+  padding-right: 0 !important;
+}
+
+/* Invoice Groups
++----------------------------------------------- */
+#invoice .item_group_title h2 {
+  background: url("/themes/modernist/dotted_border.png") repeat-x bottom left;
+  padding-bottom: 0.75em;
+}
+
+#invoice table .item_group_title td {
+  padding: 2.5em 0 0.25em 0;
+}
