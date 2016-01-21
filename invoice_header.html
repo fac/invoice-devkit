@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>FreeAgent Invoice Devkit: Invoice with Header</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="styles/base.css" media="screen" />
+<!-- Base Stylesheet do not change or remove -->
+<link rel="stylesheet" type="text/css" href="styles/horizon_print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="styles/horizon.css" />
+<!-- Remove this and add your own invoice styles -->
+</head>
+<body> 
+<div id="invoice"> 
+  <div id="invoice-header"> <img alt="Mainlogo_large" class="logo screen" src="images/freeagent_logo.png" /> 
+    <!-- hCard microformat --> 
+    <div class="vcard" id="company-address"> 
+      <div class="fn org"><strong>Company Name</strong></div> 
+      <div class="adr"> 
+        <div class="street-address">Street Address line<br/> 
+          2nd Street Address<br /> 
+        </div> 
+        <!-- street-address --> 
+        <div class="locality">Locality</div> 
+        <div id="company-postcode"><span class="region">Region</span> <span class="postal-code">EX12 8PZ</span></div> 
+      </div> 
+      <!-- adr --> 
+      <div class="email">email@company.com</div> 
+    <div id="sales-tax-reg-number">SALES TAX: 1234567</div> 
+    </div> 
+    <!-- company-address vcard --> 
+  </div> 
+  <!-- #invoice-header --> 
+  <div id="invoice-info"> 
+    <h2>Invoice <strong>INV001</strong></h2> 
+    <h3>21 February 2008</h3> 
+    <p id="payment-terms">Payment Terms: 30 days</p> 
+    <p id="payment-due">Payment due by 21 March 2008</p> 
+	<p id="payment-total">&#163;2643.75</p>
+  </div> 
+  <!-- #invoice-info --> 
+  <div class="vcard" id="client-details"> 
+    <div class="fn">John Doe</div> 
+    <div class="org">Client Company</div> 
+    <div class="adr"> 
+      <div class="street-address"> Client Street Address<br/> 
+        Street Address 2<br /> 
+        Street Address 3<br /> 
+      </div> 
+      <!-- street-address --> 
+      <div class="locality">LOCALITY</div> 
+      <div id="client-postcode"><span class="region">Region</span> <span class="postal-code">MV2 8SX</span></div> 
+      <div id="your-tax-number">SALES TAX: 193528491</div>
+    </div> 
+    <!-- adr --> 
+  </div> 
+  <!-- #client-details vcard --> 
+  <table id="invoice-amount"> 
+    <thead> 
+      <tr id="header_row"> 
+        <th class="quantity_th">Quantity</th> 
+        <th class="left details_th">Details</th> 
+        <th class="unitprice_th">Unit Price (&#163;)</th> 
+        <th class="salestax_th">VAT</th> 
+        <th class="subtotal_th">Net Subtotal (&#163;)</th> 
+      </tr> 
+    </thead> 
+    <tfoot> 
+      <tr id="discount_tr"> 
+        <td colspan="2">&nbsp;</td> 
+        <td colspan="2" class="item_r">10% Discount</td> 
+        <td class="item_r">&#163;250.00</td> 
+      </tr> 
+      <tr id="net_total_tr"> 
+        <td colspan="2">&nbsp;</td> 
+        <td colspan="2" class="item_r">Net Total</td> 
+        <td class="item_r">2250.00</td> 
+      </tr> 
+      <tr id="vat_tr"> 
+        <td colspan="2">&nbsp;</td> 
+        <td colspan="2" class="item_r">VAT</td> 
+        <td class="item_r">393.75</td> 
+      </tr> 
+      <tr id="total_tr"> 
+        <td colspan="2">&nbsp;</td> 
+        <td colspan="2" class="total" id="total_currency"><span class="currency">GBP </span> Total</td> 
+        <td class="total">&#163;2643.75</td> 
+      </tr> 
+    </tfoot> 
+    <tbody> 
+      <tr class="item odd"> 
+        <td class="item_l">1 Day</td> 
+        <td class="item_l">Details of project activity to be billed </td> 
+        <td class="item_r">500.00</td> 
+        <td class="item_r">17.5%</td> 
+        <td class="item_r">500.00</td> 
+      </tr> 
+      <tr class="item"> 
+        <td class="item_l">2 Days</td> 
+        <td class="item_l">Other Details of project activity to be billed </td> 
+        <td class="item_r">1000.00</td> 
+        <td class="item_r">17.5%</td> 
+        <td class="item_r">1000.00</td> 
+      </tr> 
+      <tr class="item odd"> 
+        <td class="item_l">2 Days</td> 
+        <td class="item_l">More d etails of project activity to be billed </td> 
+        <td class="item_r">1500.00</td> 
+        <td class="item_r">17.5%</td> 
+        <td class="item_r">1000.00</td> 
+      </tr> 
+    </tbody> 
+  </table> 
+  <!-- invoice-amount --> 
+  <div id="invoice-other"> 
+    <h2>Other Information</h2> 
+    <div id="company-reg-number"><strong>Company Registration Number:</strong> 9273109</div>  
+    <div id="contract-number"><strong>Contract/PO:</strong> PO 87227643</div> 
+  </div> 
+  <!-- invoice-other --> 
+  <div id="payment-details"> 
+    <h2>Payment Details</h2> 
+    <div id="bank_name">Bank Name</div> 
+    <div id="sort-code"><strong>Bank/Sort Code:</strong> 32-75-97</div> 
+    <div id="account-number"><strong>Account Number:</strong> 28270761</div> 
+    <div id="iban"><strong>IBAN:</strong> 973547</div> 
+    <div id="bic"><strong>BIC:</strong> 220197</div> 
+    <div id="payment-reference"><strong>Payment Reference:</strong> INV001</div> 
+  </div> 
+  <!-- payment-details --> 
+  <div id="comments">Payment should be made by bank transfer or cheque made payable to John Smith.</div> 
+  <!-- comments --> 
+</div> 
+</body>
+</html>
