@@ -1,7 +1,33 @@
-@page{margin:0;}
-#invoice{padding:1cm; background:#fff}
-body{background:#fff url(../images/horizon-greenbar.gif) left top repeat-x}
+@page {
+  margin: 0;
+  padding: 0;
+}
 
-#invoice{padding-bottom:0}
+@bottom-center {
+  color: #666;
+  content: counter(page) "/" counter(pages);
+  font: 12px Arial, Helvetica, sans-serif;
+}
 
-table#invoice-amount td, div{border-width:0.05mm !important}
+@page:first {
+  margin-top: 0;
+}
+
+@top-center {
+  content: none;
+}
+
+body {
+  font-family: Verdana, Tahoma,  sans-serif !important;
+  width: 100%;
+}
+
+table#invoice-amount td,
+div,
+table#invoice-amount th {
+  border-width: 0.05mm !important;
+}
+
+#meta {
+  display: none;
+}
