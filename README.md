@@ -26,14 +26,14 @@ Remember it’s not possible to edit the underlying HTML of invoice in FreeAgent
 
 
 ## Files and directories
-`index.html`
+`index.html`  
 An example file showing a preview of what your invoice theme will look like. Don’t bother editing any of the HTML, as you can’t edit the HTML for invoices in FreeAgent. Only the CSS can be edited, so the only change you’ll want to make in this file is to amend the stylesheet `href`s.
 
-`base.css`
+`base.css`  
 Do not edit. These are base styles used to simulate those from the FreeAgent desktop environment.
 
-`gallery`, `images`, and `themes`
+`gallery`, `images`, and `themes`  
 Do not edit. These directories contain imagery referenced by our own invoice themes.
 
-`styles`
+`styles`  
 Contains copies of our invoice theme stylesheets. You can use these as the basis for your own theme, but we’d recommend creating duplicates of the files you want, then renaming them. This way you’ll always have the original theme files to compare against your own, in case you need to fix something that’s gone wrong with your custom theme.  
