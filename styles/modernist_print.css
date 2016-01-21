@@ -1,0 +1,72 @@
+/*
+Modernist Print Styles
+Created by Robbie Manson
+October 3 2011
+*/
+
+/* Globals
+----------------------------------------------- */
+body {
+  width: 100%;
+}
+@page {
+  margin: 0;
+  padding: 0;
+}
+@bottom-center {
+  color: #666;
+  content: counter(page) "/" counter(pages);
+  font: 12px Arial,Helvetica,sans-serif;
+}
+@page:first {
+  margin-top: 0;
+}
+@top-center {
+  content: none;
+}
+#payment-details,
+#invoice-other,
+#comments {
+  page-break-inside: avoid;
+}
+#invoice {
+  background: #ffffff url("/themes/modernist/border_print.png") no-repeat 0 60px;
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+  border: 0;
+  font-size: 9pt;
+  line-height: 12pt;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#invoice #invoice-header img {
+  width: 99% !important;
+}
+#invoice #invoice-info,
+#invoice #comments {
+  background-image: url("/themes/modernist/border_emphasised_print.png");
+}
+#invoice #invoice-header {
+  margin-top: 5em;
+}
+table#invoice-amount td,
+div {
+  border-width: 0;
+}
+.draft #invoice #invoice-other,
+.draft #invoice #payment-details {
+  margin-top: -31px;
+}
+#invoice #invoice-header,
+#invoice #client-details {
+  padding-top: 1.5em;
+}
+#invoice #invoice-amount .item_r.subtotal_td,
+#invoice #invoice-amount #net_total_amount,
+#invoice #invoice-amount #sales_tax_amount,
+#invoice #invoice-amount #total_amount {
+  font-weight: bold;
+}
+#invoice #invoice-amount #total_tr .total {
+  background-position: 0 85px;
+}
