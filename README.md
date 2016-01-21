@@ -6,11 +6,13 @@ http://www.freeagent.com/support/kb/invoicing/css-guide-for-invoice-templates/
 
 
 ## Getting started
-Download the devkit, then run a local server at the root directory. You may already have your own methods for running a local server. If not, here are a few options, depending on your system setup:
+Download the devkit, then run a local server at the root directory. You may already have your own methods for running a local server. If not, here are a few options for starting one from the command line:
 
 `php -S localhost:3000` to run PHP (>= 5.4.0)  
 `python -m SimpleHTTPServer 3000` for Python 2.7  
 `ruby -run -e httpd . -p 3000` for Ruby
+
+You could also download an app like [MAMP](https://www.mamp.info/en/) or [XAMPP](https://www.apachefriends.org/index.html).
 
 Running a local server ensures the relevant `background` paths in the theme CSS files stay consistent with the invoice theme code we use in the FreeAgent app, making it easy for you to copy/paste your changes (and yes, this is why the directory structure seems a bit strange).
 
