@@ -1,7 +1,42 @@
-@page{margin:0;}
-#invoice{padding:1cm; border:0}
-body{border-top:1mm solid #000}
+@page {
+  margin: 0;
+  padding: 0;
+}
 
-#invoice{padding-bottom:0}
+@bottom-center {
+  color: #666;
+  content: counter(page) "/" counter(pages);
+  font: 12px Arial, Helvetica, sans-serif;
+}
 
-table#invoice-amount td, div{border-width:0.05mm !important}
+@page:first {
+  margin-top: 0;
+}
+
+@top-center {
+  content: none;
+}
+
+#payment-details,
+#invoice-other,
+#comments {
+  page-break-inside: avoid;
+}
+
+#invoice {
+  border: 0;
+  padding: 1cm 1cm 0 1cm;
+}
+
+body {
+  border-top: 1mm solid #000;
+}
+
+table#invoice-amount td,
+div {
+  border-width: 0.05mm !important;
+}
+
+#meta {
+  display: none;
+}

@@ -1,68 +1,310 @@
 /*
-Bauhaus Invoice Template
+Bauhaus Theme
 Created by Roan Lavery
 18/02/08 */
 
 /*=========================== TYPOGRAPHY =========================*/
 
-#invoice p, #invoice h2, #invoice h3{margin:0}
-#invoice {font-family: Helvetica, Arial,  sans-serif; color: #000;line-height:1.3}
-#invoice h1 {margin: 0;color: #000;text-transform: uppercase;}
-#invoice h2, #invoice h3 {font-family: Helvetica, Arial, Verdana, sans-serif; color:#000; text-transform: none; line-height:1.2;margin-top:10px}
-#invoice #invoice-info h3 {margin: 3px 0 0 0; font-size:11pt}
-#invoice h2 {font-size:11pt}
-#company-address, #client-details, #payment-details, #invoice-other, #invoice-amount td, th,  #invoice-info {font-size:10pt}
-#invoice #invoice-terms h2{margin-bottom:3px}
-#invoice #invoice-terms h3{margin-top:0;margin-bottom:5px;font-weight:normal;font-style:italic; color:#666; font-size:9pt}
-#invoice #payment-due{color:#999;font-weight:bold; font-size:10pt}
-#invoice-info #payment-total{display:none}
-#invoice .total{font-size:12pt;}
-#comments {font-weight:bold;margin-top:15px;line-height:1.2; color:#999; font-size:10pt}
+#invoice p,
+#invoice h2,
+#invoice h3 {
+  margin: 0;
+}
+
+#invoice {
+  color: #000;
+  font-family: Helvetica, Arial,  sans-serif;
+  line-height: 1.3;
+}
+
+#invoice h1 {
+  color: #000;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#invoice h2,
+#invoice h3 {
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  margin-top: 10px;
+  text-transform: none;
+  white-space: normal;
+}
+
+#invoice h2 {
+  font-size: 11pt;
+}
+
+#company-address,
+#client-details,
+#payment-details,
+#invoice-other,
+#invoice-amount td,
+th,
+#invoice-info {
+  font-size: 10pt;
+}
+
+#invoice #invoice-info h3 {
+  font-size: 11pt;
+  margin: 3px 0 0 0;
+}
+
+#invoice #invoice-info h2 {
+  font-size: 14pt;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+#invoice #invoice-terms h2 {
+  margin-bottom: 3px;
+}
+
+#invoice #invoice-terms h3 {
+  color: #666;
+  font-size: 9pt;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+#invoice #payment-due {
+  color: #999;
+  font-size: 10pt;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+#invoice-info #payment-total {
+  display: none;
+}
+
+#invoice-other h2,
+#payment-details h2 {
+  margin-bottom: 1em;
+}
+
+#invoice .total {
+  font-size: 12pt;
+}
+
+#comments {
+  color: #999;
+  font-size: 10pt;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 15px;
+}
 
 /*=========================== LAYOUT =========================*/
 
-#invoice{padding:0 1cm 1cm 1cm;border-top:5px solid #000;}
-#invoice-header #company-address {float:right; width:250px;clear:right }
-#invoice-header h1{float:left; width:350px; color:#000; margin:5px 0 0 0}
-#invoice-header{padding-top:1cm; }
-#invoice-header .logo {float:left; }
-#invoice-blank-header {margin-top: 1.6cm;}
-#client-details{border-top:1px solid #ddd; padding-top:10px; float:left; width:330px;  border-top:1px solid #ddd;margin-top:20px;margin-bottom:20px }
-#invoice-info {width:250px; float:right;border-top:1px solid #ddd;clear:both;margin-top:20px;margin-bottom:20px  }
-#invoice-info th{text-align:right}
-#invoice-info h2 {margin-bottom: 0px; text-transform:uppercase; font-size:14pt}
-#invoice-info h3 {margin: 0px 0 0 0px;}
-#payment-terms{display:none}
-#payment-due{color:#666; line-height:1.3}
-#invoice-amount {margin: 2em 0 2em 0; clear: both;}
+#invoice {
+  border-top: 5px solid #000;
+  padding: 0 1cm 1cm 1cm;
+}
 
-#payment-details{width:330px; float:left; border-top:1px solid #ddd; }
-#invoice-other{width:250px;clear:both; float:right;  border-top:1px solid #ddd; }
-#invoice-other h2, #payment-details h2 {margin-bottom: 1em;}
+#invoice-header #company-address {
+  clear: right;
+  float: right;
+  width: 250px;
+}
 
-#comments{clear:both; padding-top:1cm}
+#invoice-header h1 {
+  color: #000;
+  float: left;
+  margin: 5px 0 0 0;
+  width: 350px;
+}
 
-/*=========================== TABLES =========================*/
+#invoice-header {
+  padding-top: 1cm;
+}
 
-#invoice table { border-collapse:collapse; width:100%;clear:both;}
-#invoice table th {text-align:left;padding: 4px 5px 4px 5px;}
-#invoice #header_row{background:#000; color:#fff}
-#invoice-amount td.action{border-bottom:0}
-#invoice-amount tr.odd td{background:#F4F4F4} 
+#invoice-header .logo {
+  float: left;
+}
 
-#invoice-amount #total_tr td{border-bottom:0}
-#invoice-amount #vat_tr td{border-bottom:1px solid #000}
-#invoice-amount td {white-space: nowrap;margin: 0;vertical-align: center; border-bottom:1px solid #ddd}
+#invoice-blank-header {
+  margin-top: 1.6cm;
+}
 
-#invoice-amount td {margin: 0;padding: 5px; vertical-align: top; }
-#invoice-amount td.item_r{text-align: right;}
-#invoice-amount td.item_l{text-align: left;white-space: normal; }
-#invoice-amount td.total{text-align: right;font-weight: bold; }
+#client-details {
+  border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-top: 10px;
+  width: 330px;
+}
 
-#invoice-amount .details_th{width:44%}
-#invoice-amount .details_notax_th{width:52%}
-#invoice-amount .quantity_th{width:13%}
-#invoice-amount .subtotal_th{width:18%; text-align:right}
-#invoice-amount .unitprice_th{width:17%; text-align:right}
-#invoice-amount .salestax_th{width:8%; text-align:center}
+#invoice-info {
+  border-top: 1px solid #ddd;
+  clear: both;
+  float: right;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 250px;
+}
 
+#invoice-info th {
+  text-align: right;
+}
+
+#payment-terms {
+  display: none;
+}
+
+#invoice-amount {
+  clear: both;
+  margin: 2em 0 2em 0;
+}
+
+#payment-details {
+  border-top: 1px solid #ddd;
+  float: left;
+  width: 330px;
+}
+
+#invoice-other {
+  border-top: 1px solid #ddd;
+  clear: both;
+  float: right;
+  width: 270px;
+}
+
+#comments {
+  clear: both;
+  padding-top: 1cm;
+}
+
+/*=========================== INVOICE AMOUNT TABLE =========================*/
+
+#invoice table {
+  border-collapse: collapse;
+  clear: both;
+  width: 100%;
+}
+
+#invoice table th {
+  padding: 6px 5px;
+  text-align: left;
+}
+
+#invoice #header_row {
+  background: #000;
+  color: #fff;
+}
+
+#invoice-amount td.action {
+  border-bottom: 0;
+}
+
+.odd td {
+  background: #F4F4F4;
+}
+
+.even td {
+  background: #FFF;
+}
+
+#invoice-amount .discount_tier td {
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+#invoice-amount #total_tr td {
+  border-bottom: 0;
+}
+
+#invoice-amount #vat_tr td {
+  border-bottom: 1px solid #000;
+}
+
+#invoice-amount td {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  white-space: nowrap;
+}
+
+#invoice-amount td {
+  margin: 0;
+  padding: 6px 5px;
+  vertical-align: top;
+}
+
+#invoice-amount td.item_r {
+  text-align: right;
+}
+
+#invoice-amount td.item_l {
+  text-align: left;
+  white-space: normal;
+}
+
+#invoice-amount td.total {
+  font-weight: bold;
+  text-align: right;
+}
+
+#invoice-amount .details_th {
+  width: 44%;
+}
+
+#invoice-amount .details_notax_th {
+  width: 52%;
+}
+
+#invoice-amount .quantity_th {
+  width: 13%;
+}
+
+#invoice-amount .subtotal_th {
+  text-align: right;
+  width: 18%;
+}
+
+#invoice-amount .unitprice_th {
+  text-align: right;
+  width: 17%;
+}
+
+#invoice-amount .salestax_th {
+  text-align: center;
+  width: 8%;
+}
+
+#invoice-amount th.money_th {
+  text-align: right;
+}
+
+/* Invoice UK VAT Summary Table */
+#invoice #invoice-uk-vat-summary {
+  background: #fff;
+  border-collapse: collapse;
+  border: 0;
+  clear: both;
+  margin: 25px 0 0 0;
+  width: 100%;
+}
+
+#invoice tr#invoice-uk-vat-header th {
+  border-top: 1px solid #ccc;
+  padding: 7px 0;
+}
+
+#invoice-uk-vat-summary td,
+#invoice #invoice-uk-vat-summary th {
+  font-size: 9pt;
+  padding: 2px 0;
+  text-align: left;
+}
+
+#vat-total td,
+#vat-total th {
+  border-top: 1px solid #ccc;
+}
