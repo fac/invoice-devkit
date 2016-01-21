@@ -1,13 +1,13 @@
 /*
-Invoice Simple Template
+Invoice Simple Theme
 Created by Ed Molyneux
 
 */
 /*=========================== TYPOGRAPHY =========================*/
 
-#invoice{font-family: Helvetica, Arial, Verdana, sans-serif !important } 
-#Main  #invoice h1 {margin: 0;color: #555;font-size: 24px;text-transform: uppercase;}
-#Main #invoice h2, #Main #invoice h3 {color:#000; text-transform: none;font-family: Helvetica, Arial, Verdana, sans-serif !important}
+#invoice{font-family: Helvetica, Arial, Verdana, sans-serif !important }
+#invoice h1 {margin: 0;color: #555;font-size: 24px;text-transform: uppercase;}
+#invoice h2, #invoice h3 {color:#000; text-transform: none;font-family: Helvetica, Arial, Verdana, sans-serif !important;}
 #invoice h2 {margin: 10px 0;font-size: 14pt;}
 #invoice-amount td, th {font-size: 9pt;}
 #invoice-header #company-address {text-align: right; font-size: 11pt; line-height: 14pt;}
@@ -33,6 +33,13 @@ Created by Ed Molyneux
 #invoice #payment-details{float:left; width:250px;}
 #invoice-amount {margin: 1em 0; clear: both; }
 #invoice h1#company-name {display:block;}
+#invoice-amount tr.item td {
+  border-top: 0;
+}
+#invoice-amount tfoot td {
+  border-top: 1px solid #ddd;
+}
+#invoice-amount .item_group_title td {padding-top: 0.75em;}
 
 #comments{clear:both; padding-top:0.5cm}
 
@@ -41,7 +48,8 @@ Created by Ed Molyneux
 #invoice table#invoice-amount { border-collapse:collapse; width:100%;clear:both;}
 #invoice-amount th {text-align: left;white-space: nowrap;padding: 1px 2px 0 5px; font-weight: bold;background: #FFF;border-bottom: solid 1px #444; }
 #invoice-amount tr.odd{background: #EEE;}
-#invoice-amount td {margin: 0;padding: 2px 5px 2px 5px; vertical-align: top;}
+#invoice-amount tr.even{background: #FFF;}
+#invoice-amount td {margin: 0;padding: 4px 5px; vertical-align: top;}
 #invoice-amount td.item_r{text-align: right;}
 #invoice-amount td.item_l{text-align: left;white-space: normal;}
 #invoice-amount td.total{text-align: right;font-weight: bold}
@@ -52,3 +60,9 @@ Created by Ed Molyneux
 #invoice-amount .subtotal_th{width:15%; text-align:right}
 #invoice-amount .unitprice_th{width:10%; text-align:right}
 #invoice-amount .salestax_th{width:8%; text-align:center}
+
+/* Invoice UK VAT Summary Table */
+#invoice #invoice-uk-vat-summary{width:100%;border-collapse:collapse;margin:25px 0 0 0;clear:both;border:0; background:#fff; }
+#invoice tr#invoice-uk-vat-header th{padding:7px 0;border-top: 1px solid #ccc;}
+#invoice-uk-vat-summary td, #invoice #invoice-uk-vat-summary th{text-align:left; font-size:9pt;padding:2px 0;}
+#vat-total td, #vat-total th{border-top:1px solid #ccc;}
