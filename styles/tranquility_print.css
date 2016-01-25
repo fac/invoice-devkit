@@ -1,28 +1,40 @@
+/**
+ * These `@page` rules add 'x/x' counters to all pages
+ */
+
 @page {
-  margin: 0;
+  counter-increment: page;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
+
+  @bottom-center {
+    color: #666;
+    content: counter(page) "/" counter(pages);
+    font: normal 9pt Arial, Helvetica, sans-serif;
+  }
+
 }
 
-@bottom-center {
-  color:#666;
-  content: counter(page) "/" counter(pages);
-  font: 12px Arial, Helvetica, sans-serif;
-}
+/**
+ * Remove default `margin` from the top of the first invoice page, as most
+ * themes include an image or border
+ */
 
 @page:first {
-  margin-top: 1.5cm;
+  margin-top: 0;
 }
 
-@top-center {
-  content: none;
+/**
+ * Hide the `#meta` sidebar
+ */
+
+#meta {
+  display: none;
 }
 
 table#invoice-amount td,
 table#invoice-amount th,
 div {
   border-width: 0.05mm !important;
-}
-
-#meta {
-  display: none;
 }

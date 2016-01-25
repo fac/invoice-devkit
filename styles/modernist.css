@@ -8,8 +8,7 @@ May 2013
 ----------------------------------------------- */
 
 #invoice {
-  background: #ffffff url("/themes/modernist/border.png") no-repeat 0 60px;
-  background-size: 100%;
+  background: #fff url("/themes/modernist/border.png") no-repeat 0 60px;
   color: #353535;
   font: normal 13px/18px "Helvetica Neue",Arial,Helvetica,sans-serif; /* 13px */
   padding: 4.615em 0; /* 60/13px */
@@ -162,7 +161,6 @@ May 2013
 ----------------------------------------------- */
 #invoice #invoice-info {
   background: url("/themes/modernist/border_emphasised.png") no-repeat bottom left;
-  background-size: 100%;
   float: left;
   margin: 5.5em 0 0 0;
   padding-bottom: 1em;
