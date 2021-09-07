@@ -11,7 +11,10 @@
   @bottom-center {
     color: #666;
     content: counter(page) "/" counter(pages);
-    font: normal 9pt Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 }
@@ -37,4 +40,8 @@ table#invoice-amount td,
 table#invoice-amount th,
 div {
   border-width: 0.05mm !important;
+}
+
+#invoice {
+  padding: 1cm !important;
 }

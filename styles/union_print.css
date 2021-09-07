@@ -3,6 +3,7 @@
  */
 
 @page {
+  border-left: 60px solid #99080d;
   counter-increment: page;
   margin-left: 0;
   margin-right: 0;
@@ -11,7 +12,10 @@
   @bottom-center {
     color: #666;
     content: counter(page) "/" counter(pages);
-    font: normal 9pt Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 }
@@ -33,13 +37,16 @@
   display: none;
 }
 
-body {
-  border-left: 60px solid #99080d;
-}
+/**
+ * 1. Left-hand border is removed from the `#invoice` element in this print CSS
+ *    and instead applied to the `@page` element to ensure the appearance of the
+ *    PDF is consistent with the on-screen preview
+ */
 
 #invoice {
+  /* 1 */
   border-left: 0;
-  padding-bottom: 0;
+  padding: 0 1cm 0 1cm !important;
 }
 
 #Main {

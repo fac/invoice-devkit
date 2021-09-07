@@ -20,7 +20,10 @@ October 3 2011
   @bottom-center {
     color: #666;
     content: counter(page) "/" counter(pages);
-    font: normal 9pt Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 }
@@ -52,8 +55,8 @@ body {
 }
 #invoice {
   background: #ffffff url("/themes/modernist/border_print.png") no-repeat 0 60px;
-  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
   border: 0;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 9pt;
   line-height: 12pt;
   margin: 0;
@@ -67,9 +70,18 @@ body {
 #invoice #comments {
   background-image: url("/themes/modernist/border_emphasised_print.png");
 }
+#comments {
+  width: 70.5357143% !important;
+}
 #invoice #invoice-header {
   margin-top: 5em;
 }
+
+/* Push the main body down to counteract the absolute positioning */
+#invoice #invoice-blank-header {
+  height: 10.5em;
+}
+
 table#invoice-amount td,
 div {
   border-width: 0;

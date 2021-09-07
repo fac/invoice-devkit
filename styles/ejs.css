@@ -185,12 +185,12 @@ some_nowhitespace {
 
 #invoice-info h2 {
   font-size: 14pt;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 
 #invoice-info h3 {
-  margin: 0px 0 0 0px;
+  margin: 0;
 }
 
 #invoice-amount {
@@ -221,13 +221,13 @@ some_nowhitespace {
 #comments {
   clear: both;
   float: right;
-  width: 210px;
+  width: 100%;
 }
 
 /*=========================== TABLES =========================*/
 
 #invoice table {
-  background: #eee;
+  background: #ebeeef;
   border-collapse: collapse;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
@@ -263,7 +263,7 @@ some_nowhitespace {
 }
 
 #invoice-amount tr.item td {
-  background: #eee;
+  background: #ebeeef;
 }
 
 #invoice-amount td {
@@ -272,17 +272,18 @@ some_nowhitespace {
   vertical-align: top;
 }
 
-#invoice-amount td.item_r {
+#invoice-amount .item_r {
   text-align: right;
 }
 
-#invoice-amount td.item_l {
+#invoice-amount .item_l {
   text-align: left;
   white-space: normal;
 }
 
-#invoice-amount td.total {
+#invoice-amount .total {
   font-weight: bold;
+  line-height: 1.3;
   text-align: right;
 }
 
@@ -309,7 +310,7 @@ some_nowhitespace {
 }
 
 #invoice-amount .salestax_th {
-  text-align: center;
+  text-align: right;
   width: 8%;
 }
 
@@ -327,8 +328,8 @@ some_nowhitespace {
 
 #invoice #invoice-uk-vat-summary {
   background: #fff;
-  border-collapse: collapse;
   border: 0;
+  border-collapse: collapse;
   clear: both;
   margin: 25px 0 0 0;
   width: 100%;
