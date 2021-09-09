@@ -11,7 +11,10 @@
   @bottom-center {
     color: #666;
     content: counter(page) "/" counter(pages);
-    font: normal 9pt Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 }
@@ -39,13 +42,12 @@
   page-break-inside: avoid;
 }
 
-#invoice {
-  border: 0;
-  padding: 1cm 1cm 0 1cm;
-}
-
-body {
-  border-top: 1mm solid #000;
+#invoice.pagestyle,
+.draft #invoice.pagestyle {
+  padding-bottom: 0;
+  padding-left: 1cm;
+  padding-right: 1cm;
+  padding-top: 0 !important;
 }
 
 table#invoice-amount td,

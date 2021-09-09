@@ -10,7 +10,11 @@ May 2013
 #invoice {
   background: #fff url("/themes/modernist/border.png") no-repeat 0 60px;
   color: #353535;
-  font: normal 13px/18px "Helvetica Neue",Arial,Helvetica,sans-serif; /* 13px */
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
   padding: 4.615em 0; /* 60/13px */
   position: relative;
   width: 764px;
@@ -19,7 +23,11 @@ May 2013
 #invoice h2,
 #invoice h3 {
   color: #353B45;
-  font: bold 1em "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
   margin: 0;
 }
 #invoice h3 {
@@ -90,9 +98,15 @@ May 2013
   float: right;
   margin-right: 2.2321429%; /* 20/896px */
   min-height: 12em;
-  width: 18.3035714%; /* 164/896px */
   position: relative;
+  width: 18.3035714%; /* 164/896px */
 }
+
+/* Push the main body down to counteract the absolute positioning */
+#invoice #invoice-blank-header {
+  height: 5.5em;
+}
+
 #invoice #client-details {
   left: 0;
 }
@@ -100,14 +114,15 @@ May 2013
   padding-right: 10.8695652%; /* 20/184px */
 }
 #invoice #invoice-header img {
-  margin-bottom: 1em;
   height: auto !important;
+  margin-bottom: 1em;
   width: 100% !important;
 }
 #invoice #company-postcode .postal-code {
   display: block;
 }
-#invoice #invoice-header .email {
+#invoice #invoice-header .email,
+#invoice #invoice-header .url {
   word-wrap: break-word;
 }
 #invoice #invoice-amount {
@@ -116,7 +131,7 @@ May 2013
 #invoice #invoice-amount,
 #invoice #client-details {
   margin: 0 4.4642857% !important; /* 40/896px */
-  width: 70.5357143%; /* 632/896px */
+  width: 70.5357143% !important; /* 632/896px */
 }
 #invoice #invoice-uk-vat-summary {
   clear: both;
@@ -172,8 +187,8 @@ May 2013
   display: inline;
   font-size: 1em;
 }
-#invoice #invoice-info h2:after,
-#invoice #invoice-info h3:after {
+#invoice #invoice-info h2::after,
+#invoice #invoice-info h3::after {
   content: " ·";
 }
 #invoice #invoice-info #payment-terms,

@@ -47,11 +47,11 @@
   padding-right: 8px;
 }
 
-#payment-due:before {
+#payment-due::before {
   content: "(";
 }
 
-#payment-due:after {
+#payment-due::after {
   content: ")";
 }
 
@@ -64,7 +64,7 @@
 
 #invoice-info #payment-total {
   color: #76B618;
-  font-size: 16pt;
+  font-size: 12pt;
   font-weight: bold;
   line-height: 1.3;
 }
@@ -109,6 +109,7 @@ p#payment-due {
 
 #invoice .total {
   font-size: 12pt;
+  line-height: 1.3;
 }
 
 #comments {
@@ -292,19 +293,20 @@ p#payment-due {
   vertical-align: top;
 }
 
-#invoice-amount td.item_r {
+#invoice-amount .item_r {
   text-align: right;
 }
 
-#invoice-amount td.item_l {
+#invoice-amount .item_l {
   text-align: left;
   white-space: normal;
 }
 
-#invoice-amount td.total {
+#invoice-amount .total {
   color: #65A900;
   font-size: 12pt;
   font-weight: bold;
+  line-height: 1.3;
   text-align: right;
 }
 
@@ -326,8 +328,8 @@ p#payment-due {
 }
 
 #invoice-amount .subtotal_th {
-  width: 18%;
   text-align: right;
+  width: 18%;
 }
 
 #invoice-amount .unitprice_th {
@@ -336,7 +338,7 @@ p#payment-due {
 }
 
 #invoice-amount .salestax_th {
-  text-align: center;
+  text-align: right;
   width: 8%;
 }
 
@@ -344,8 +346,8 @@ p#payment-due {
 
 #invoice #invoice-uk-vat-summary {
   background: #fff;
-  border-collapse: collapse;
   border: 0;
+  border-collapse: collapse;
   clear: both;
   margin: 25px 0 0 0;
   width: 100%;
