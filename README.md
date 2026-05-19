@@ -8,9 +8,9 @@ http://www.freeagent.com/support/kb/invoicing/css-guide-for-invoice-templates/
 ## Getting started
 Download the devkit, then run a local server at the root directory. You may already have your own methods for running a local server. If not, here are a few options for starting one from the command line:
 
-`php -S localhost:3000` to run PHP (>= 5.4.0)  
-`python -m SimpleHTTPServer 3000` for Python 2.7  
-`ruby -run -e httpd . -p 3000` for Ruby
+`php -S localhost:3000` to run PHP 
+`python3 -m http.server 3000` (we would recommend running with Python 3.12 or above due to a known issue in earlier versions)
+`ruby -run -e httpd . -p 3000` for Ruby (requires WEBrick gem: `gem install webrick`)
 
 You could also download an app like [MAMP](https://www.mamp.info/en/) or [XAMPP](https://www.apachefriends.org/index.html).
 
