@@ -1,19 +1,60 @@
+/* Generic invoice styles for FreeAgent themes */
+/* Settings and tools
+-------------------------------------------------------------------------- */
+/* General invoice styles (not theme-specific)
+----------------------------------------------- */
+/* Wrap long invoice item description content (e.g. URLs) */
+#invoice-amount {
+  max-width: 100%;
+  width: 100%;
+}
+
+#invoice-amount td.description_td,
+#invoice #comments {
+  overflow-wrap: break-word;
+  width: 100%;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+h1#company-name {
+  display: none;
+}
+
+/* Global text styles for invoice */
+[id=invoice] h1,
+[id=invoice] h2,
+[id=invoice] h3,
+[id=invoice] h4,
+[id=invoice] h5,
+[id=invoice] h6 {
+  font-weight: bold;
+}
+
+[id=invoice] strong {
+  font-weight: bold;
+}
+
 /*
 Bauhaus Theme
 Created by Roan Lavery
 18/02/08 */
+#invoice.pagestyle,
+.draft #invoice.pagestyle {
+  padding-top: 0;
+}
 
 /*=========================== TYPOGRAPHY =========================*/
-
 #invoice p,
 #invoice h2,
 #invoice h3 {
   margin: 0;
 }
 
-#invoice {
+#invoice.pagestyle {
+  border-top: 1mm solid #000 !important;
   color: #000;
-  font-family: Helvetica, Arial,  sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.3;
 }
 
@@ -72,7 +113,7 @@ th,
 }
 
 #invoice #payment-due {
-  color: #999;
+  color: #5e6e78;
   font-size: 10pt;
   font-weight: bold;
   line-height: 1.3;
@@ -87,12 +128,21 @@ th,
   margin-bottom: 1em;
 }
 
-#invoice .total {
-  font-size: 12pt;
+#payment-link {
+  display: inline-block;
+  max-width: 250px;
+  vertical-align: top;
+  margin-bottom: 2em;
+}
+
+/* Ensure payment text is clearly a link, not using global FreeAgent link style */
+#payment-link a {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #comments {
-  color: #999;
+  color: #5e6e78;
   font-size: 10pt;
   font-weight: bold;
   line-height: 1.2;
@@ -100,12 +150,6 @@ th,
 }
 
 /*=========================== LAYOUT =========================*/
-
-#invoice {
-  border-top: 5px solid #000;
-  padding: 0 1cm 1cm 1cm;
-}
-
 #invoice-header #company-address {
   clear: right;
   float: right;
@@ -128,12 +172,11 @@ th,
 }
 
 #invoice-blank-header {
-  margin-top: 1.6cm;
+  margin-top: 2.6cm;
 }
 
 #client-details {
-  border-top: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #d8dde0;
   float: left;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -142,7 +185,7 @@ th,
 }
 
 #invoice-info {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #d8dde0;
   clear: both;
   float: right;
   margin-bottom: 20px;
@@ -164,13 +207,13 @@ th,
 }
 
 #payment-details {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #d8dde0;
   float: left;
   width: 330px;
 }
 
 #invoice-other {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #d8dde0;
   clear: both;
   float: right;
   width: 270px;
@@ -182,7 +225,6 @@ th,
 }
 
 /*=========================== INVOICE AMOUNT TABLE =========================*/
-
 #invoice table {
   border-collapse: collapse;
   clear: both;
@@ -194,9 +236,9 @@ th,
   text-align: left;
 }
 
-#invoice #header_row {
+#invoice #header_row th {
   background: #000;
-  color: #fff;
+  color: #fff !important;
 }
 
 #invoice-amount td.action {
@@ -208,7 +250,7 @@ th,
 }
 
 .even td {
-  background: #FFF;
+  background: #fff;
 }
 
 #invoice-amount .discount_tier td {
@@ -226,7 +268,7 @@ th,
 }
 
 #invoice-amount td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #d8dde0;
   margin: 0;
   white-space: nowrap;
 }
@@ -237,17 +279,19 @@ th,
   vertical-align: top;
 }
 
-#invoice-amount td.item_r {
+#invoice-amount .item_r {
   text-align: right;
 }
 
-#invoice-amount td.item_l {
+#invoice-amount .item_l {
   text-align: left;
   white-space: normal;
 }
 
-#invoice-amount td.total {
+#invoice-amount .total {
+  font-size: 12pt;
   font-weight: bold;
+  line-height: 1.3;
   text-align: right;
 }
 
@@ -274,19 +318,15 @@ th,
 }
 
 #invoice-amount .salestax_th {
-  text-align: center;
-  width: 8%;
-}
-
-#invoice-amount th.money_th {
   text-align: right;
+  width: 8%;
 }
 
 /* Invoice UK VAT Summary Table */
 #invoice #invoice-uk-vat-summary {
   background: #fff;
-  border-collapse: collapse;
   border: 0;
+  border-collapse: collapse;
   clear: both;
   margin: 25px 0 0 0;
   width: 100%;
