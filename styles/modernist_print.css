@@ -1,43 +1,72 @@
+/* Generic invoice styles for FreeAgent themes */
+/* Settings and tools
+-------------------------------------------------------------------------- */
+/* General invoice print styles (not theme-specific)
+----------------------------------------------- */
+body {
+  padding: 0 !important;
+}
+
+/* Wrap long invoice item description content (e.g. URLs) */
+#invoice-amount {
+  max-width: 100%;
+  width: 100%;
+}
+
+#invoice-amount td.description_td,
+#invoice #comments {
+  overflow-wrap: break-word;
+  width: 100%;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+#invoice-amount thead, #invoice-amount tfoot {
+  display: table-row-group;
+}
+
+/**
+ * Force Chrome print-to-PDF to honour background colours
+ */
+#invoice {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
 /*
 Modernist Print Styles
 Created by Robbie Manson
 October 3 2011
 */
-
 /* Globals
 ----------------------------------------------- */
-
 /**
  * These `@page` rules add 'x/x' counters to all pages
  */
-
 @page {
   counter-increment: page;
   margin-left: 0;
   margin-right: 0;
   padding: 0;
-
   @bottom-center {
     color: #666;
     content: counter(page) "/" counter(pages);
-    font: normal 9pt Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
   }
-
 }
-
 /**
  * Remove default `margin` from the top of the first invoice page, as most
  * themes include an image or border
  */
-
-@page:first {
+@page :first {
   margin-top: 0;
 }
-
 /**
  * Hide the `#meta` sidebar
  */
-
 #meta {
   display: none;
 }
@@ -45,49 +74,79 @@ October 3 2011
 body {
   width: 100%;
 }
+
 #payment-details,
 #invoice-other,
 #comments {
   page-break-inside: avoid;
 }
+
 #invoice {
-  background: #ffffff url("/themes/modernist/border_print.png") no-repeat 0 60px;
-  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+  background: #fff url("/themes/modernist/border_print.png") no-repeat 0 60px;
   border: 0;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 9pt;
   line-height: 12pt;
   margin: 0;
   padding: 0;
   width: 100%;
 }
+
 #invoice #invoice-header img {
   width: 99% !important;
 }
+
 #invoice #invoice-info,
 #invoice #comments {
   background-image: url("/themes/modernist/border_emphasised_print.png");
 }
+
+#comments {
+  width: 70.5357143% !important;
+}
+
 #invoice #invoice-header {
   margin-top: 5em;
 }
+
+#invoice #invoice-blank-header {
+  height: 10.5em;
+}
+
 table#invoice-amount td,
 div {
   border-width: 0;
 }
+
 .draft #invoice #invoice-other,
 .draft #invoice #payment-details {
   margin-top: -31px;
 }
+
 #invoice #invoice-header,
 #invoice #client-details {
   padding-top: 1.5em;
 }
+
 #invoice #invoice-amount .item_r.subtotal_td,
 #invoice #invoice-amount #net_total_amount,
 #invoice #invoice-amount #sales_tax_amount,
 #invoice #invoice-amount #total_amount {
   font-weight: bold;
 }
+
 #invoice #invoice-amount #total_tr .total {
   background-position: 0 85px;
+}
+
+@media print and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  #invoice-amount {
+    table-layout: auto !important;
+  }
+  table#invoice-amount tfoot {
+    break-inside: auto;
+  }
+  #invoice-other {
+    break-inside: avoid;
+  }
 }

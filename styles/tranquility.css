@@ -1,12 +1,46 @@
+/* Generic invoice styles for FreeAgent themes */
+/* Settings and tools
+-------------------------------------------------------------------------- */
+/* General invoice styles (not theme-specific)
+----------------------------------------------- */
+/* Wrap long invoice item description content (e.g. URLs) */
+#invoice-amount {
+  max-width: 100%;
+  width: 100%;
+}
+
+#invoice-amount td.description_td,
+#invoice #comments {
+  overflow-wrap: break-word;
+  width: 100%;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+h1#company-name {
+  display: none;
+}
+
+/* Global text styles for invoice */
+[id=invoice] h1,
+[id=invoice] h2,
+[id=invoice] h3,
+[id=invoice] h4,
+[id=invoice] h5,
+[id=invoice] h6 {
+  font-weight: bold;
+}
+
+[id=invoice] strong {
+  font-weight: bold;
+}
+
 /*
 Tranquility Theme
 Created by Roan Lavery
 18/02/08
 */
-
-
 /*=========================== TYPOGRAPHY =========================*/
-
 #invoice {
   color: #6C8597;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -66,6 +100,19 @@ th,
   letter-spacing: 0.07em;
 }
 
+#payment-link {
+  display: inline-block;
+  max-width: 250px;
+  vertical-align: top;
+  margin-bottom: 2em;
+}
+
+/* Ensure payment text is clearly a link, not using global FreeAgent link style */
+#payment-link a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 #client-details {
   color: #5F7C91;
 }
@@ -76,7 +123,7 @@ th,
   font-variant: small-caps;
   font-weight: normal;
   letter-spacing: 0.1em;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   text-transform: capitalize;
 }
 
@@ -88,7 +135,7 @@ th,
 }
 
 #invoice #payment-due {
-  color: #999;
+  color: #5e6e78;
   font-size: 10pt;
   font-weight: normal;
 }
@@ -103,7 +150,7 @@ th,
 }
 
 #comments {
-  color: #888;
+  color: #5e6e78;
   font-size: 9pt;
   font-weight: normal;
   text-align: center;
@@ -114,10 +161,9 @@ th,
 }
 
 /*=========================== LAYOUT =========================*/
-
 #invoice {
-  background: #fff url("/gallery/ripple.jpg") 0px 120px no-repeat;
-  padding: 0 0.8cm 1.8cm 0.8cm;
+  background: #fff url("/gallery/ripple.jpg") 0 120px no-repeat;
+  padding: 0.8cm 0.8cm 1.8cm 0.8cm;
 }
 
 #invoice-header #company-address {
@@ -134,13 +180,9 @@ th,
   width: 350px;
 }
 
-#invoice-header {
-  padding-top: 0.5cm;
-}
-
 #invoice-header .logo {
   float: left;
-  margin: 0px 0 0 0px;
+  margin: 0;
 }
 
 #invoice-blank-header {
@@ -149,7 +191,7 @@ th,
 
 #client-details {
   float: left;
-  margin: 0px 0 20px 10px;
+  margin: 0 0 20px 10px;
   padding-top: 10px;
   width: 330px;
 }
@@ -205,7 +247,6 @@ th,
 }
 
 /*=========================== TABLES =========================*/
-
 #invoice table {
   border-collapse: collapse;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -227,7 +268,7 @@ th,
 }
 
 #invoice table tr.even {
-  background: #FFF;
+  background: #fff;
 }
 
 #invoice-amount td.action {
@@ -247,7 +288,7 @@ th,
 }
 
 #invoice-amount #total_tr td {
-  background: #eee;
+  background: #ebeeef;
   border-bottom: 0;
 }
 
@@ -256,7 +297,7 @@ th,
 }
 
 #invoice-amount td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #d8dde0;
   margin: 0;
   padding: 2px;
   vertical-align: center;
@@ -269,22 +310,23 @@ th,
   vertical-align: top;
 }
 
-#invoice-amount td.item_r {
+#invoice-amount .item_r {
   text-align: right;
 }
 
-#invoice-amount td.item_l {
+#invoice-amount .item_l {
   text-align: left;
   white-space: normal;
 }
 
-#invoice-amount td.total {
+#invoice-amount .total {
   font-weight: bold;
+  line-height: 1.3;
   text-align: right;
 }
 
 #invoice-amount td.action {
-  background: #FFF;
+  background: #fff;
   padding-right: 0;
   text-align: center;
   white-space: nowrap;
@@ -318,15 +360,15 @@ th,
 }
 
 #invoice-amount .salestax_th {
-  text-align: center;
+  text-align: right;
   width: 7%;
 }
 
 /* Invoice UK VAT Summary Table */
 #invoice #invoice-uk-vat-summary {
   background: #fff;
-  border-collapse: collapse;
   border: 0;
+  border-collapse: collapse;
   clear: both;
   margin: 25px 0 0 0;
   width: 100%;

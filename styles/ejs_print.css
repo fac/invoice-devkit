@@ -1,34 +1,65 @@
+/* Generic invoice styles for FreeAgent themes */
+/* Settings and tools
+-------------------------------------------------------------------------- */
+/* General invoice print styles (not theme-specific)
+----------------------------------------------- */
+body {
+  padding: 0 !important;
+}
+
+/* Wrap long invoice item description content (e.g. URLs) */
+#invoice-amount {
+  max-width: 100%;
+  width: 100%;
+}
+
+#invoice-amount td.description_td,
+#invoice #comments {
+  overflow-wrap: break-word;
+  width: 100%;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+#invoice-amount thead, #invoice-amount tfoot {
+  display: table-row-group;
+}
+
+/**
+ * Force Chrome print-to-PDF to honour background colours
+ */
+#invoice {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
 /**
  * These `@page` rules add 'x/x' counters to all pages
  */
-
 @page {
   counter-increment: page;
   margin-left: 0;
   margin-right: 0;
   padding: 0;
-
   @bottom-center {
     color: #666;
     content: counter(page) "/" counter(pages);
-    font: normal 9pt Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
   }
-
 }
-
 /**
  * Remove default `margin` from the top of the first invoice page, as most
  * themes include an image or border
  */
-
-@page:first {
+@page :first {
   margin-top: 0;
 }
-
 /**
  * Hide the `#meta` sidebar
  */
-
 #meta {
   display: none;
 }
@@ -37,4 +68,20 @@ table#invoice-amount td,
 table#invoice-amount th,
 div {
   border-width: 0.05mm !important;
+}
+
+#invoice {
+  padding: 1cm !important;
+}
+
+@media print and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  #invoice-header {
+    break-after: avoid-page;
+  }
+  #invoice-blank-header {
+    margin-top: 3.225cm;
+  }
+  #payment-details, #invoice-other, #comments {
+    margin-top: 0.5cm;
+  }
 }
